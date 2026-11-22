@@ -1,0 +1,274 @@
+{
+  "dataset_summary": {
+    "total_samples": 27870,
+    "train_samples": 22296,
+    "test_samples": 5574,
+    "num_features": 13,
+    "target_distribution": {
+      "class_0_low_indicators": 11562,
+      "class_1_elevated_indicators": 16308,
+      "elevated_ratio": 0.5851
+    }
+  },
+  "models": {
+    "Logistic Regression": {
+      "cross_validation": {
+        "accuracy_mean": 0.7952,
+        "accuracy_std": 0.0098,
+        "precision_mean": 0.8458,
+        "precision_std": 0.0125,
+        "recall_mean": 0.7952,
+        "recall_std": 0.0085,
+        "f1_mean": 0.8196,
+        "f1_std": 0.008,
+        "roc_auc_mean": 0.8731,
+        "roc_auc_std": 0.0076
+      },
+      "test_set": {
+        "accuracy": 0.7878,
+        "precision": 0.8352,
+        "recall": 0.794,
+        "f1_score": 0.8141,
+        "roc_auc": 0.8671,
+        "confusion_matrix": [
+          [
+            1801,
+            511
+          ],
+          [
+            672,
+            2590
+          ]
+        ]
+      },
+      "threshold_tuned_0_40": {
+        "threshold": 0.4,
+        "accuracy": 0.7935,
+        "precision": 0.8008,
+        "recall": 0.8614,
+        "f1": 0.83,
+        "confusion_matrix": [
+          [
+            1613,
+            699
+          ],
+          [
+            452,
+            2810
+          ]
+        ]
+      },
+      "model_path": "models/logistic_regression.joblib"
+    },
+    "Decision Tree": {
+      "cross_validation": {
+        "accuracy_mean": 0.7753,
+        "accuracy_std": 0.0081,
+        "precision_mean": 0.8157,
+        "precision_std": 0.0102,
+        "recall_mean": 0.796,
+        "recall_std": 0.0057,
+        "f1_mean": 0.8057,
+        "f1_std": 0.0063,
+        "roc_auc_mean": 0.8464,
+        "roc_auc_std": 0.0089
+      },
+      "test_set": {
+        "accuracy": 0.7781,
+        "precision": 0.8149,
+        "recall": 0.8032,
+        "f1_score": 0.809,
+        "roc_auc": 0.846,
+        "confusion_matrix": [
+          [
+            1717,
+            595
+          ],
+          [
+            642,
+            2620
+          ]
+        ]
+      },
+      "threshold_tuned_0_40": {
+        "threshold": 0.4,
+        "accuracy": 0.7797,
+        "precision": 0.8131,
+        "recall": 0.8096,
+        "f1": 0.8114,
+        "confusion_matrix": [
+          [
+            1705,
+            607
+          ],
+          [
+            621,
+            2641
+          ]
+        ]
+      },
+      "model_path": "models/decision_tree.joblib"
+    },
+    "Random Forest": {
+      "cross_validation": {
+        "accuracy_mean": 0.7894,
+        "accuracy_std": 0.0122,
+        "precision_mean": 0.8379,
+        "precision_std": 0.0134,
+        "recall_mean": 0.7938,
+        "recall_std": 0.011,
+        "f1_mean": 0.8152,
+        "f1_std": 0.0104,
+        "roc_auc_mean": 0.8673,
+        "roc_auc_std": 0.0087
+      },
+      "test_set": {
+        "accuracy": 0.7822,
+        "precision": 0.8278,
+        "recall": 0.7928,
+        "f1_score": 0.8099,
+        "roc_auc": 0.8636,
+        "confusion_matrix": [
+          [
+            1774,
+            538
+          ],
+          [
+            676,
+            2586
+          ]
+        ]
+      },
+      "threshold_tuned_0_40": {
+        "threshold": 0.4,
+        "accuracy": 0.7906,
+        "precision": 0.7922,
+        "recall": 0.8706,
+        "f1": 0.8296,
+        "confusion_matrix": [
+          [
+            1567,
+            745
+          ],
+          [
+            422,
+            2840
+          ]
+        ]
+      },
+      "model_path": "models/random_forest.joblib"
+    },
+    "K-Nearest Neighbors": {
+      "cross_validation": {
+        "accuracy_mean": 0.7769,
+        "accuracy_std": 0.0085,
+        "precision_mean": 0.7923,
+        "precision_std": 0.0084,
+        "recall_mean": 0.8386,
+        "recall_std": 0.0067,
+        "f1_mean": 0.8148,
+        "f1_std": 0.0067,
+        "roc_auc_mean": 0.8369,
+        "roc_auc_std": 0.0075
+      },
+      "test_set": {
+        "accuracy": 0.7716,
+        "precision": 0.7877,
+        "recall": 0.8348,
+        "f1_score": 0.8105,
+        "roc_auc": 0.8281,
+        "confusion_matrix": [
+          [
+            1578,
+            734
+          ],
+          [
+            539,
+            2723
+          ]
+        ]
+      },
+      "threshold_tuned_0_40": {
+        "threshold": 0.4,
+        "accuracy": 0.7628,
+        "precision": 0.7506,
+        "recall": 0.8906,
+        "f1": 0.8146,
+        "confusion_matrix": [
+          [
+            1347,
+            965
+          ],
+          [
+            357,
+            2905
+          ]
+        ]
+      },
+      "model_path": "models/k_nearest_neighbors.joblib"
+    }
+  },
+  "best_model": "K-Nearest Neighbors",
+  "feature_importances": [
+    {
+      "feature": "Perceived_Stress_Index",
+      "importance": 0.34475
+    },
+    {
+      "feature": "Academic Pressure",
+      "importance": 0.24091
+    },
+    {
+      "feature": "Financial Stress",
+      "importance": 0.12315
+    },
+    {
+      "feature": "Age",
+      "importance": 0.07303
+    },
+    {
+      "feature": "Work/Study Hours",
+      "importance": 0.05682
+    },
+    {
+      "feature": "Dietary Habits_Unhealthy",
+      "importance": 0.04182
+    },
+    {
+      "feature": "Study Satisfaction",
+      "importance": 0.03387
+    },
+    {
+      "feature": "CGPA",
+      "importance": 0.02026
+    },
+    {
+      "feature": "Degree_Class 12",
+      "importance": 0.01456
+    },
+    {
+      "feature": "Sleep Duration_More than 8 hours",
+      "importance": 0.00742
+    },
+    {
+      "feature": "Sleep Duration_Less than 5 hours",
+      "importance": 0.00717
+    },
+    {
+      "feature": "Family History of Mental Illness_Yes",
+      "importance": 0.00559
+    },
+    {
+      "feature": "Dietary Habits_Moderate",
+      "importance": 0.00543
+    },
+    {
+      "feature": "Sleep_Deficit_Flag",
+      "importance": 0.00469
+    },
+    {
+      "feature": "Gender_Male",
+      "importance": 0.00383
+    }
+  ]
+}
